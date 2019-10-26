@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/message"
+        style="@style/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Morse_Vibes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Enter a text, then press the button to make your phone vibrate the message in morse code."
+        app:layout_constraintEnd_toEndOf="@id/guideRight"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:layout_constraintTop_toBottomOf="@id/message" />
+
+    <TextView
+        android:id="@+id/morseCode"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Morse Code:"
+        app:layout_constraintEnd_toEndOf="@id/guideRight"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:layout_constraintTop_toBottomOf="@id/description" />
+
+    <TextView
+        android:id="@+id/morseMessage"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="0dp"
+        android:text="...   ---   ..."
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideRight"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:layout_constraintTop_toBottomOf="@id/morseCode" />
+
+    <EditText
+        android:id="@+id/input"
+        android:hint="Enter your plain text here"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@id/guideRight"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:layout_constraintTop_toBottomOf="@id/morseMessage" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Morse Vibration"
+        app:layout_constraintEnd_toEndOf="@id/guideRight"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:layout_constraintTop_toBottomOf="@id/input" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLeft"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRight"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
