@@ -13,12 +13,8 @@ class MainViewModel @Inject constructor() : ViewModel() {
     }
 
     init {
-        /**
-         * Start a coroutine within the ViewModel's scope, so it gets cancelled automatically
-         * when the ViewModel is no longer needed.
-         */
         viewModelScope.launch {
-            morseCodes.postValue("hey wenn das geht wär echt sweet")
+            morseCodes.postValue("")
         }
     }
 }
